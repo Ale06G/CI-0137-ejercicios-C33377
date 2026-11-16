@@ -6,12 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currículum</title>
   <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/main.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <header>
-    <img src="profile-pic.jpeg" alt="Foto de perfil de Alessandra González Iglesias" width="150" height="150">
+  <header class="header">
+    <img class="profile-picture" src="profile-pic.jpeg" alt="Foto de perfil de Alessandra González Iglesias" width="150"
+      height="150">
 
     <h1>Alessandra González Iglesias</h1>
     <p>Estudiante de Computación</p>
@@ -39,76 +45,24 @@
         orientada a la resolución de problemas.</p>
     </section>
 
-    <section>
+    <section class="experience-projects">
       <h2>Experiencia y proyectos</h2>
-
-      <article>
-        <h3>Página web de Biomimesis — Horas estudiante</h3>
-        <p> Participación en el desarrollo y mantenimiento de la página web de Biomimesis durante un programa de horas
-          estudiante. </p>
-
-        <ul>
-          <li> Colaboración en el desarrollo y actualización de contenido de la página web.</li>
-          <li> Aplicación de conocimientos de desarrollo web.</li>
-          <li> Trabajo colaborativo con el equipo encargado del proyecto.</li>
-        </ul>
-      </article>
-
-      <article>
-        <h3>Sistema para farmacia — Proyecto Integrador de Redes y Sistemas Operativos</h3>
-        <p> Proyecto académico desarrollado en los cursos de Proyecto Integrador, Redes y Sistemas Operativos, orientado
-          a la creación de un sistema para la gestión de una farmacia.</p>
-
-        <ul>
-          <li> Desarrollo de un sistema para la gestión de una farmacia.</li>
-          <li>Implementación de comunicación entre diferentes componentes del sistema.</li>
-          <li> Aplicación de conceptos de redes, sistemas operativos y programación.</li>
-          <li> Trabajo colaborativo utilizando control de versiones.</li>
-        </ul>
-      </article>
-
-      <article>
-        <h3>Microprocesador — Proyecto Integrador de Lenguaje Ensamblador y Arquitectura de Computadoras</h3>
-        <p> Proyecto académico desarrollado en los cursos de Lenguaje Ensamblador y Arquitectura de Computadoras.</p>
-
-        <ul>
-          <li>Diseño y construcción de un microprocesador.</li>
-          <li>Ensamblaje y soldadura de componentes electrónicos.</li>
-          <li>Aplicación práctica de conceptos de arquitectura de computadoras y lenguaje ensamblador.</li>
-          <li>Trabajo con componentes de hardware y circuitos electrónicos.</li>
-        </ul>
-      </article>
     </section>
 
-    <section>
+    <section class="education">
       <h2>Formación académica</h2>
-
-      <article>
-        <h3>Universidad de Costa Rica</h3>
-        <p>Bachillerato en Computación con énfasis en Ingeniería de Software — En curso</p>
-      </article>
     </section>
 
     <section>
       <h2>Habilidades técnicas</h2>
 
-      <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>React</li>
-        <li>C++</li>
-      </ul>
+      <ul class="technical-skills"></ul>
     </section>
 
     <section>
       <h2>Habilidades blandas</h2>
 
-      <ul>
-        <li>Trabajo en equipo</li>
-        <li>Organización</li>
-        <li>Adaptabilidad</li>
-        <li>Aprendizaje continuo</li>
-      </ul>
+      <ul class="soft-skills"></ul>
     </section>
 
     <section>
@@ -122,22 +76,7 @@
           </tr>
         </thead>
 
-        <tbody>
-          <tr>
-            <td>Español</td>
-            <td>Nativo</td>
-          </tr>
-
-          <tr>
-            <td>Inglés</td>
-            <td>Intermedio alto (B2)</td>
-          </tr>
-
-          <tr>
-            <td>Francés</td>
-            <td>Básico</td>
-          </tr>
-        </tbody>
+        <tbody class="languages"></tbody>
       </table>
     </section>
 
