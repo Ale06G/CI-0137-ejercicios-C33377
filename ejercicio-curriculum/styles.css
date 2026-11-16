@@ -195,37 +195,34 @@ footer p {
 }
 
 /* modo oscuro */
-@media (prefers-color-scheme: dark) {
+html.dark-mode {
+  --primary-color: #475f78;
+  --secondary-color: #bcccdc;
+  --accent-color: #63b3ed;
+  --background-color: #1a202c;
+  --card-color: #2d3748;
+  --text-color: #f7fafc;
+  --muted-color: #cbd5e0;
+  --border-color: #4a5568;
+}
 
-  :root {
-    --primary-color: #475f78;
-    --secondary-color: #bcccdc;
-    --accent-color: #63b3ed;
-    --background-color: #1a202c;
-    --card-color: #2d3748;
-    --text-color: #f7fafc;
-    --muted-color: #cbd5e0;
-    --border-color: #4a5568;
-  }
+html.dark-mode header p {
+  color: var(--muted-color);
+}
 
-  header p {
-    color: var(--muted-color);
-  }
+html.dark-mode th {
+  color: #ffffff;
+  background-color: #486581;
+}
 
-  th {
-    color: #ffffff;
-    background-color: #486581;
-  }
+html.dark-mode td {
+  color: var(--text-color);
+}
 
-  td {
-    color: var(--text-color);
-  }
+html.dark-mode tbody tr:nth-child(even) {
+  background-color: #374151;
+}
 
-  tbody tr:nth-child(even) {
-    background-color: #374151;
-  }
-
-  footer {
-    color: var(--muted-color);
-  }
+html.dark-mode footer {
+  color: var(--muted-color);
 }
