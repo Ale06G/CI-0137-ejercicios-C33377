@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículum</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/js/main.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="header">
+    <img class="profile-picture" src="/<%= foto %>" alt="Foto de perfil de <%= nombre %>" width="150" height="150">
+
+    <h1><%= nombre %></h1>
+    <p><%= titulo %></p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Contacto</h2>
+
+      <p>Teléfono: <%= contacto.telefono %></p>
+      <p>Correo electrónico: <%= contacto.correo %></p>
+      <a href="<%= contacto.github %>" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="<%= contacto.linkedin %>" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </section>
+
+    <section>
+      <h2>Perfil profesional</h2>
+
+      <p><%= perfil %></p>
+    </section>
+
+    <section class="experience-projects">
+      <h2>Experiencia y proyectos</h2>
+
+      <% proyectos.forEach(proyecto => { %>
+        <article>
+          <h3><%= proyecto.title %></h3>
+          <p><%= proyecto.description %></p>
+          <ul>
+            <% proyecto.details.forEach(detalle => { %>
+              <li><%= detalle %></li>
+            <% }) %>
+          </ul>
+        </article>
+      <% }) %>
+    </section>
+
+    <section class="education">
+      <h2>Formación académica</h2>
+
+      <% formacion.forEach(item => { %>
+        <article>
+          <h3><%= item.institution %></h3>
+          <p><%= item.degree %></p>
+        </article>
+      <% }) %>
+    </section>
+
+    <section>
+      <h2>Habilidades técnicas</h2>
+
+      <ul class="technical-skills">
+        <% habilidadesTecnicas.forEach(h => { %>
+          <li><%= h %></li>
+        <% }) %>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Habilidades blandas</h2>
+
+      <ul class="soft-skills">
+        <% habilidadesBlandas.forEach(h => { %>
+          <li><%= h %></li>
+        <% }) %>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Idiomas</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Idioma</th>
+            <th>Nivel</th>
+          </tr>
+        </thead>
+
+        <tbody class="languages">
+          <% idiomas.forEach(idioma => { %>
+            <tr>
+              <td><%= idioma.name %></td>
+              <td><%= idioma.level %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="contact-form">
+      <h2>Escríbeme</h2>
+
+      <form method="POST" action="/contacto">
+        <p>
+          <label for="nombre">Nombre</label><br>
+          <input type="text" id="nombre" name="nombre" required>
+        </p>
+        <p>
+          <label for="correo">Correo electrónico</label><br>
+          <input type="email" id="correo" name="correo" required>
+        </p>
+        <p>
+          <label for="mensaje">Mensaje</label><br>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        </p>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 <%= nombre %>.</p>
+  </footer>
+
+</body>
+
+</html>
